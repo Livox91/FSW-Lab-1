@@ -1,0 +1,166 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table styles */
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+/* Header styles */
+.timetable thead tr {
+    background-color: #f8f9fa;
+}
+
+.day-header,
+.time-slot {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #e9ecef;
+}
+
+.time-slot {
+    font-size: 10px;
+    min-width: 140px;
+}
+
+/* Day column */
+.day {
+    border: 1px solid #000;
+    padding: 15px 8px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 60px;
+}
+
+/* Subject cells */
+.timetable td {
+    border: 1px solid #000;
+    padding: 8px;
+    vertical-align: top;
+    height: 80px;
+    position: relative;
+}
+
+.empty {
+    background-color: #fff;
+}
+
+.subject {
+    background-color: #e3f2fd;
+    padding: 6px;
+}
+
+.subject.lab {
+    background-color: #fff3e0;
+}
+
+.subject-name {
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 4px;
+    color: #1976d2;
+    line-height: 1.2;
+}
+
+.lab .subject-name {
+    color: #f57c00;
+}
+
+.room {
+    font-size: 9px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.1;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 20px;
+    font-size: 10px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .timetable {
+        font-size: 10px;
+    }
+
+    .time-slot {
+        font-size: 8px;
+        min-width: 100px;
+    }
+
+    .subject-name {
+        font-size: 9px;
+    }
+
+    .room {
+        font-size: 8px;
+    }
+
+    .day {
+        font-size: 12px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .timetable {
+        page-break-inside: avoid;
+    }
+}
